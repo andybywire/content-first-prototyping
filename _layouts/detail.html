@@ -1,0 +1,96 @@
+---
+layout: default
+---
+
+<div class="row">
+    <div class='small-12 columns'>
+            {% if page.url contains 'catalogue' %}
+                <h2>{{ page.name | replace: '-', ' ' | remove: '.html' | capitalize }}</h2>
+                <div class="small-12 large-8 columns end">
+                    <div class="row">
+                        <div class="small-12 medium-3 columns">
+                            <img src="/img/{{ page.img }}">
+                        </div>
+                        <div class='small-12 medium-9 columns'>
+                            <p>{{ page.description }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-9 small-offset-3 columns">
+                            <button type="button" data-open="popup1" class="primary button float-right">Such Amazing!</button>
+                        </div>
+                        <div class="reveal" id="popup1" data-reveal>
+                            <h4>Much wow.</h4>
+                            <button class="close-button" data-close aria-label="Close reveal" type="button">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row pagination">
+                        <div class="small-6 columns">
+                            {% for item in site.data.catalogue %}
+                                {% assign current = page.index | plus: 0 %} <!-- needed to convert the string to an integer -->
+                                {% assign previous = item.index | plus: 1 %}
+                                {% if current == previous %}
+                                    <a href="{{ item.name | datapage_url: '/catalogue' }}" class="float-left"><< Previous: {{ item.name | capitalize }}</a>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="small-6 columns float-right">
+                            {% for item in site.data.catalogue %}
+                                {% assign current = page.index | plus: 0 %} <!-- needed to convert the string to an integer -->
+                                {% assign next = item.index | minus: 1 %}
+                                {% if current == next %}
+                                    <a href="{{ item.name | datapage_url: '/catalogue' }}" class="float-right">Next: {{ item.name | capitalize }} >></a>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            {% elsif page.url contains 'directory' %}
+                <h2>{{ page.first-name }} {{ page.last-name }}</h2>
+                <div class="small-12 medium-8 columns">
+                    <div class="row">
+                        <div class="small-3 columns">
+                            <img src="/img/{{ page.photo }}">
+                        </div>
+                        <div class='small-9 columns'>
+                            <p>{{ page.bio }}</p>
+                        </div>
+                        <div class="small-9 small-offset-3 columns">
+                            <h5>Specialties</h5>
+                            {% assign specialties = page.specialties | split: ',' %}
+                            {% for specialty in specialties %}
+                                <ul>
+                                    <li>{{ specialty }}</li>
+                                </ul>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="small-9 small-offset-3 medium-3 medium-offset-1 columns">
+                    <h5>Other People</h5>
+                    <ul>
+                    {% for person in site.data.directory %}
+                        {% if person.last-name != page.last-name %}
+                        <li >
+                            <a href="{{ person.last-name | datapage_url: '/directory' }}">{{ person.first-name }} {{ person.last-name }}</a>
+                        </li>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% elsif page.url contains 'feed' %}
+                <h4>Events Feed</h4>
+                {% for event in site.data.feed %}
+                    <ul>
+                        <li>
+                            <a href="{{ event.event-name | datapage_url: '/feed' }}">{{ event.event-name }}</a>
+                        </li>
+                    </ul>
+                {% endfor %}    
+            {% else %}
+                <h4>There is nothing here.</h4> 
+            {% endif %}
+    </div>
+</div>
+

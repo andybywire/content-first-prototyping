@@ -1,0 +1,176 @@
+---
+layout: default
+---
+<h2>Foundation Tear Sheet</h2>
+<p>This page gives you an easy reference to some of the most common building blocks for Foundation. Modify them, play around with them, or totally destroy them to get going. Once you've gotten your fill here, check out <a href="http://foundation.zurb.com/sites/docs/">Foundation's official documentation</a>. There you'll find tons of example, instructions, and code snippets you can stick right into your prototypes. </p>
+
+
+<div class="row tearsheet">
+  <div class="column"> <!-- If you don't specify small-# to a column, Foundation will assume you mean "go full-width on small screens."  -->
+    <h3>The Grid</h3>
+    <!-- Grid Example -->
+    <div class="row">
+      <div class="large-12 medium-12 columns"> 
+        <div class="secondary callout">
+          <p><strong>This is a twelve column section in a row.</strong> Each of these includes a divsecondary.callout element so you can see where the columns are - it's not required at all for the grid.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-6 medium-6 columns">
+        <div class="secondary callout">
+          <p><strong>Six columns</strong></p>
+        </div>
+      </div>
+      <div class="large-6 medium-6 columns">
+        <div class="secondary callout">
+          <p><strong>Six columns</strong></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-4 medium-4 small-12 columns">
+        <div class="secondary callout">
+          <p><strong>Four columns</strong></p>
+            <p>Each of these last columns will shift to full width (i.e. 12 columns across) when the window width drops below the small breakpoing. Resize your window to see (then check out the markup to see how it works).</p>
+        </div>
+      </div>
+      <div class="large-4 medium-4 small-12 columns">
+        <div class="secondary callout">
+          <p><strong>Four columns</strong></p>
+            <p>Each of these last columns will shift to full width (i.e. 12 columns across) when the window width drops below the small breakpoing. Resize your window to see (then check out the markup to see how it works).</p>
+        </div>
+      </div>
+      <div class="large-4 medium-4 small-12 columns">
+        <div class="secondary callout">
+          <p><strong>Four columns</strong></p>
+            <p>Each of these last columns will shift to full width (i.e. 12 columns across) when the window width drops below the small breakpoing. Resize your window to see (then check out the markup to see how it works).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <h3>Typography</h3>
+    <!-- Header Examples -->
+    <div class="row">
+      <div class="column">      
+        <h1>h1. This is a very large header.</h1>
+        <h2>h2. This is a large header.</h2>
+        <h3 class="foundation-default">h3. This is a medium header.</h3>
+        <h4>h4. This is a moderate header.</h4>
+        <h5>h5. This is a small header.</h5>
+        <h6>h6. This is a tiny header.</h6>
+        <p>p. This is the normal body text size. Let's give the body a little more body so we have a sense of what the leading (line-height) and color looks like. That should about do it. Blammo! A whole paragraph appears – as if by magic!</p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <h3>Colors</h3>
+    <!-- Button Examples -->
+    <div class="row">
+      <div class="column">   
+        <p>Some of the color settings in the Foundation style sheet accompanied with this framework have been modified from Foundation's "out-of-the-box" configuration. The goal of this monochromatic wireframe style is to help your prototype not "look like" a Foundatin Site (or a Bootstrap Site, or anything else) so that you (and your users) can focus on the content and the relationships your structure creates.</p> 
+        <h4 class="swatch primary">Primary: Cool Grey 80%, #667788</h4> 
+        <h4 class="swatch accent">Accent: Cool Grey 40%, #D1D6DB</h4> 
+        <h4 class="swatch secondary">Secondary: Cool Grey 20%, #EFF1F3</h4> 
+        <h4 class="swatch black">Black, #3A444E</h4> 
+        <h4 class="swatch white">White #FEFEFE</h4> 
+      </div>
+    </div>
+  </div>        
+  <div class="column">
+    <h3>Callouts</h3>
+    <!-- Callout Examples -->
+    <div class="row">
+      <div class="medium-4 columns">
+        <div class="callout">
+          <p>Callouts come in a couple varieties. Here's a default callout.</p>
+        </div>
+      </div>
+      <div class="medium-4 columns">
+        <div class="secondary callout">
+          <p>Here's a callout with a class of secondary added on to it.</p>
+        </div>
+      </div>
+      <div class="medium-4 columns">
+        <div class="primary callout">
+          <p>And finally a callout with a class of primary added on to it. Intense!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <h3>Buttons</h3>
+    <!-- Button Examples -->
+    <div class="row">
+      <div class="column clearfix">
+        <a href="#" class="primary button">Primary Button</a>
+        <a href="#" class="disabled primary button">Pri. Btn Disabled</a>
+      </div>
+      <div class="column clearfix">
+        <a href="#" class="hollow button">Secondary Btn</a>
+        <a href="#" class="disabled hollow button">Sec Btn Disabled</a>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <h3>Form Fields</h3>
+    <!-- Form Examples -->
+    <form>
+      <div class="row">
+        <div class="large-12 columns">
+          <label>Input Label</label>
+          <input type="text" placeholder="large-12.columns" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-4 medium-4 columns">
+          <label>Input Label</label>
+          <input type="text" placeholder="large-4.columns" />
+        </div>
+        <div class="large-4 medium-4 columns">
+          <label>Input Label</label>
+          <input type="text" placeholder="large-4.columns" />
+        </div>
+        <div class="large-4 medium-4 columns">
+          <div class="row collapse">
+            <label>Input Label</label>
+            <div class="input-group">
+              <input type="text" placeholder="small-9.columns" class="input-group-field" />
+              <span class="input-group-label">.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-12 columns">
+          <label>Select Box</label>
+          <select>
+            <option value="husker">Husker</option>
+            <option value="starbuck">Starbuck</option>
+            <option value="hotdog">Hot Dog</option>
+            <option value="apollo">Apollo</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-6 medium-6 columns">
+          <label>Choose Your Favorite</label>
+          <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
+          <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
+        </div>
+        <div class="large-6 medium-6 columns">
+          <label>Check these out</label>
+          <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+          <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-12 columns">
+          <label>Textarea Label</label>
+          <textarea placeholder="small-12.columns"></textarea>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

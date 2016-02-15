@@ -1,0 +1,29 @@
+{
+  "name": "content-first-prototyping",
+  "version": "1.0.0",
+  "description": "Basic framework for a Content First Prototyping project",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-sequence": "^0.4.4",
+    "gulp-sheets2json": "^1.0.1",
+    "gulp-sourcemaps": "^1.6.0"
+  },  
+  "scripts": {
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/andybywire/content-first-prototyping.git"
+  },  
+  "keywords": [
+    "prototyping",
+    "prototype",
+    "content-first"
+  ],
+  "author": "Andy Fitzgerald <http://www.andyfitzgerald.org>",
+  "license": "ISC",
+  "private": true
+}

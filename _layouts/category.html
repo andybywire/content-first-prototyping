@@ -1,0 +1,50 @@
+---
+layout: default
+---
+{{ content }}
+
+<div class="row">
+    <div class='small-12 columns'>
+        {% assign data = page.data %}
+        {% case data %}
+            {% when 'catalogue' %}
+                <h4>Catalogue Items</h4>
+                <ul>
+                {% for item in site.data.catalogue %}
+                    <li class="row">  
+                        <img src="/img/{{ item.img }}" class="small-6 medium-2 columns">
+                        <div class="small-6 medium-8 end columns">
+                            <h5><a href="{{ item.name | datapage_url: '/catalogue' }}">{{ item.name }}</a></h5>
+                            <p>{{ item.description }}</p>
+                        </div>
+                    </li>
+                {% endfor %}
+                </ul>
+            {% when 'directory' %}
+                <h4>People</h4>
+                <ul>
+                {% for person in site.data.directory %}
+                    <li class="row">
+                        <img src="/img/{{ person.photo }}" class="small-6 medium-2 columns">
+                        <div class="small-12 medium-8 end columns">
+                            <a href="{{ person.last-name | datapage_url: '/directory' }}">{{ person.first-name }} {{ person.last-name }}</a>
+                            <p>{{ person.bio }}</p>
+                        </div>
+                    </li>
+                {% endfor %}
+                </ul>
+            {% when 'feed' %}
+                <h4>Events Feed</h4>
+                {% for event in site.data.feed %}
+                    <ul class="medium-8 columns end">
+                        <li class="events">
+                            <h5>{{ event.event-name }}</h5>
+                            <p>{{ event.date | date: "%a, %B %-d" }}: {{ event.description }}</p>
+                        </li>
+                    </ul>
+                {% endfor %}    
+            {% else %}
+                <h4>There is nothing here.</h4> 
+        {% endcase %}
+    </div>
+</div>

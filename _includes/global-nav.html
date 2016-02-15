@@ -1,0 +1,51 @@
+<!-- off-canvas title bar for 'small' screen -->
+<div class="title-bar" data-responsive-toggle="widemenu" data-hide-for="medium">
+  <div class="title-bar-left">
+    <button class="menu-icon" type="button" data-open="offCanvasLeft"></button>
+    <a href="/"><span class="title-bar-title">{{ site.title }}</span></a>
+  </div>
+</div>
+
+<!-- off-canvas left menu -->
+<div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
+  <ul class="vertical menu">
+        {% for nav in site.data.navigation %}
+          <li><a href="{{ nav.path }}">{{ nav.label }}</a>
+            {% if nav.sub-nav == 'categories' %}
+              <ul class="vertical menu secondary">
+                {% for sub-nav in site.data.categories %}
+                  <li><a href="/{{ sub-nav.category | append:'.html' }}">{{ sub-nav.category-label }}</a></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+  </ul>
+</div>
+
+<!-- wider top-bar menu for 'medium' and up -->
+<div id="widemenu" class="top-bar">
+  <div class="column row">
+    <div class="top-bar-left">
+        <a href="/"><div class="menu-text">{{ site.title }}</div></a>
+    </div>
+    <div class="top-bar-right">
+      <ul class="dropdown menu" data-dropdown-menu>
+        {% for nav in site.data.navigation %}
+          <li><a href="{{ nav.path }}" {% if nav.path == "#" %} class="no-link" {% endif %}>{{ nav.label }}</a>
+            {% if nav.sub-nav == 'categories' %}
+              <ul class="vertical menu">
+                {% for sub-nav in site.data.categories %}
+                  <li><a href="/{{ sub-nav.category | append:'.html' }}">{{ sub-nav.category-label }}</a></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+

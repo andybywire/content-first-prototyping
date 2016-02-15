@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="small-12 medium-4 columns">
+        <h4><a href="catalogue.html">Catalogue Items</a></h4>
+        {% for item in site.data.catalogue | limit:"3" %}
+            <ul>
+                <li>
+                    <a href="{{ item.name | datapage_url: '/catalogue' }}">{{ item.name }}</a>
+                </li>
+            </ul>
+        {% endfor %}
+    </div>
+
+    <div class="small-12 medium-4 columns">
+        <h4><a href="directory.html">Directory</a></h4>
+        {% for person in site.data.directory %}
+            <ul>
+                <li>
+                    <a href="{{ person.last-name | datapage_url: '/directory' }}">{{ person.first-name }} {{ person.last-name }}</a>
+                </li>
+            </ul>
+        {% endfor %}
+    </div>
+
+    <div class="small-12 medium-4 columns">
+        <h4><a href="feed.html">Events Feed</a></h4>
+        {% for event in site.data.feed %}
+            <ul>
+                <li>{{ event.event-name }} ({{ event.event-type }})</li>
+            </ul>
+        {% endfor %} 
+    </div> 
+</div>
