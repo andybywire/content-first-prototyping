@@ -21,7 +21,7 @@ Once you’ve got your environment set up, install the project framework. (If yo
 
 2. Clone/copy the Content first Prototyping Starter Kit to your project folder 
 
-        $ git clone git://github.com/andybywire/content-first-prototyping.git
+        $ git clone https://github.com/andybywire/Content-First-Prototyping.git
 
     **- or -**
 
@@ -29,7 +29,7 @@ Once you’ve got your environment set up, install the project framework. (If yo
 
 3. Navigate to your project file. Link it to your global instance of Gulp and sync up Node and SASS
 
-        $ cd <path to your project foler>
+        $ cd <path to your project folder>
 
         $ npm link gulp
 
