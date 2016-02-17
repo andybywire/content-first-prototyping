@@ -13,15 +13,13 @@ To use the framework, you’ll need make sure you have a couple things installed
 
 Once you’ve got your environment set up, install the project framework. (If you're new to the command line, open a terminal window and enter in the commands below. Leave off the "$" – that's a stand-in for the terminal prompt. If you get a permission error, type `sudo` before the line and enter your password when prompted.)
 
-1. Install the Jekyll gem
+1. Install the Jekyll gem and Gulp (remember to use `sudo` if you see permission errors)
 
         $ gem install jekyll
 
-2. Install Gulp globally (remember to use `sudo` if you see permission errors)
-
         $ npm install gulp -g
 
-3. Clone/copy the Content first Prototyping Starter Kit to your project folder 
+2. Clone/copy the Content first Prototyping Starter Kit to your project folder 
 
         $ git clone git://github.com/andybywire/content-first-prototyping.git
 
@@ -29,15 +27,15 @@ Once you’ve got your environment set up, install the project framework. (If yo
 
     Download and copy the [.zip](https://github.com/andybywire/Content-First-Prototyping/archive/master.zip) 
 
-4. Navigate to your project file and link it to your global instance of Gulp
+3. Navigate to your project file. Link it to your global instance of Gulp and sync up Node and SASS
+
+        $ cd <path to your project foler>
 
         $ npm link gulp
 
-5. Sync up Node and SASS
-
         $ npm rebuild node-sass
 
-6. Run `gulp`. Once installed, this is the only command you'll need to run to begin a new session. 
+4. Run `gulp`. Once installed, this is the only command you'll need to run to begin a new session. 
 
         $ gulp
 
