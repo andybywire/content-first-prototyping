@@ -19,11 +19,11 @@ Once you’ve got your environment set up, install the project framework. (If yo
 
 2. Clone/copy the Content first Prototyping Starter Kit to your project folder (this will take a minute or so)
 
-        $ git clone https://github.com/andybywire/Content-First-Prototyping.git
+        $ git clone https://github.com/andybywire/content-first-prototyping.git
 
     **- or -**
 
-    Download and copy the [.zip](https://github.com/andybywire/Content-First-Prototyping/archive/master.zip) 
+    Download and copy the [.zip](https://github.com/andybywire/content-first-prototyping/archive/master.zip) 
 
 3. Navigate to your project file and install the framework dependencies
 
