@@ -3,4 +3,5 @@
 .jekyll-metadata
 _site
 _data/*.json
+_node_modules
 
