@@ -1,7 +1,8 @@
 .DS_Store
 .sass-cache
 .jekyll-metadata
+node_modules
 _site
 _data/*.json
-_node_modules
+
 

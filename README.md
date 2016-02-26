@@ -8,18 +8,16 @@ The Content First Prototyping Framework introduces practical modeling and simula
 To use the framework, you’ll need make sure you have a couple things installed:
 
 - [Command line tools](http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/)
-- [Ruby](https://www.ruby-lang.org/en/documentation/installation/) (if you’re on a Mac, this is probably already installed)
+- [Ruby](https://www.ruby-lang.org/en/documentation/installation/) (if you’re on a Mac this is probably already installed)
 - [Node.js](https://nodejs.org/en/)
 
 Once you’ve got your environment set up, install the project framework. (If you're new to the command line, open a terminal window and enter in the commands below. Leave off the "$" – that's a stand-in for the terminal prompt. If you get a permission error, type `sudo` before the line and enter your password when prompted.)
 
-1. Install the Jekyll gem and Gulp (remember to use `sudo` if you see permission errors)
+1. Install Jekyll (you may need to use `sudo` if you see permission errors)
 
         $ gem install jekyll
 
-        $ npm install gulp -g
-
-2. Clone/copy the Content first Prototyping Starter Kit to your project folder 
+2. Clone/copy the Content first Prototyping Starter Kit to your project folder (this will take a minute or so)
 
         $ git clone https://github.com/andybywire/Content-First-Prototyping.git
 
@@ -27,19 +25,17 @@ Once you’ve got your environment set up, install the project framework. (If yo
 
     Download and copy the [.zip](https://github.com/andybywire/Content-First-Prototyping/archive/master.zip) 
 
-3. Navigate to your project file. Link it to your global instance of Gulp and sync up Node and SASS
+3. Navigate to your project file and install the framework dependencies
 
         $ cd <path to your project folder>
 
-        $ npm link gulp
+        $ npm install
 
-        $ npm rebuild node-sass
+4. Run `npm start`. Once installed, this is the only command you'll need to run to begin a new session. 
 
-4. Run `gulp`. Once installed, this is the only command you'll need to run to begin a new session. 
+        $ npm start
 
-        $ gulp
-
-The Gulp command will assemble your site into the `_site` folder and then serve it to your default browser. You can copy this file to another server if you like, but don't edit any of these files in this folder directly – the next time Gulp runs an update, it will overwrite any chages you've made.  
+The start command will assemble your site into the `_site` folder and then serve it to your default browser. You can copy this file to another server if you like, but don't edit any of these files in this folder directly – the next time the framework runs an update, it will overwrite any chages you've made.  
 
 In order to get the most out of the framework, it's worth familiarizing yourself with the basics of the tools its built with. The documentation of all of these tools is excellent and should get you up to speed quickly:
 
