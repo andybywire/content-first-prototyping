@@ -37,7 +37,7 @@ Once you’ve got your environment set up, install the project framework. (If yo
 
 The start command will assemble your site into the `_site` folder and then serve it to your default browser. You can copy this file to another server if you like, but don't edit any of these files in this folder directly – the next time the framework runs an update, it will overwrite any chages you've made.  
 
-In order to get the most out of the framework, it's worth familiarizing yourself with the basics of the tools its built with. The documentation of all of these tools is excellent and should get you up to speed quickly:
+In order to get the most out of the framework, it's worth familiarizing yourself with the basics of the tools it's built with. The documentation of all of these tools is excellent and should get you up to speed quickly:
 
 - [Jekyll](http://jekyllrb.com/docs/home/)
 - [The Jekyll Data Pages Generator plugin](https://github.com/avillafiorita/jekyll-datapage_gen)
