@@ -1,10 +1,11 @@
 ---
 layout: default
 ---
+<!-- This "detail" layout serves as a template for Items in the Catalogue, People in the Directory, and Events in the Feed. If ... Then statements control which markup is displayed when by looking in the page URL – each detial page is located on the server in a folder of its parent category -->
 
 <div class="row">
     <div class='small-12 columns'>
-            {% if page.url contains 'catalogue' %}
+            {% if page.url contains 'catalogue' %} <!-- This is the block for Items in the Catalogue -->
                 <h2>{{ page.name | replace: '-', ' ' | remove: '.html' | capitalize }}</h2>
                 <div class="small-12 large-8 columns end">
                     <div class="row">
@@ -47,7 +48,7 @@ layout: default
                         </div>
                     </div>
                 </div>
-            {% elsif page.url contains 'directory' %}
+            {% elsif page.url contains 'directory' %} <!-- This is the block for People in the Directory -->
                 <h2>{{ page.first-name }} {{ page.last-name }}</h2>
                 <div class="small-12 medium-8 columns">
                     <div class="row">
@@ -79,7 +80,7 @@ layout: default
                         {% endif %}
                     {% endfor %}
                 </div>
-            {% elsif page.url contains 'feed' %}
+            {% elsif page.url contains 'feed' %} <!-- This is the block for Events in the Feed -->
                 <h4>Events Feed</h4>
                 {% for event in site.data.feed %}
                     <ul>
