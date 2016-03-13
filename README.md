@@ -1,4 +1,4 @@
-#Content First Prototyping
+#Content First Prototyping Starter Kit
 The Content First Prototyping Framework introduces practical modeling and simulation into the architecture and design of online information spaces. It works by taking your structured content from Excel Spreadsheets and assembling it into simple templates using Jekyll. It then serves everything to you in interconnected pages styled with Foundation. When you initially build your prototype, all the pieces are automatically put in place. Whenever you save changes to content, template, or style files, the system updates your build and serves the changes to your device(s).
 
 ![Content Prototyping Schema](https://raw.githubusercontent.com/andybywire/Content-First-Prototyping/master/img/cfp_schema.png)
