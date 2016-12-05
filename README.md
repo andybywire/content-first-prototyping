@@ -19,6 +19,17 @@ Once you’ve got your environment set up, install the project framework. (If yo
 
         $ gem install jekyll
 
+    NB: If you get the error:
+
+        ERROR:  While executing gem ... (Errno::EPERM)
+          Operation not permitted - /usr/bin/listen
+
+    this is because /usr/bin is [“off-limits” since El Capitan](http://stackoverflow.com/questions/31972968/cant-install-gems-on-os-x-el-capitan). If you run into this, [try instead](https://github.com/sass/sass/issues/1768):
+
+        sudo gem install -n /usr/local/bin jekyll
+
+    Thanks to [thamrick](https://github.com/thamrick) for finding the fix!
+
 2. Clone/copy the Content first Prototyping Starter Kit to your project folder (this will take a minute or so)
 
         $ git clone https://github.com/andybywire/content-first-prototyping.git
