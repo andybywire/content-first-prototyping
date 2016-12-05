@@ -26,7 +26,7 @@ Once you’ve got your environment set up, install the project framework. (If yo
 
     this is because /usr/bin is [“off-limits” since El Capitan](http://stackoverflow.com/questions/31972968/cant-install-gems-on-os-x-el-capitan). If you run into this, [try instead](https://github.com/sass/sass/issues/1768):
 
-        sudo gem install -n /usr/local/bin jekyll
+        $ sudo gem install -n /usr/local/bin jekyll
 
     Thanks to [thamrick](https://github.com/thamrick) for finding the fix!
 
