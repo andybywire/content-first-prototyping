@@ -13,7 +13,9 @@ layout: default
                 <ul>
                 {% for item in site.data.catalogue %}
                     <li class="row">  
-                        <img src="/img/{{ item.img }}" class="small-6 medium-2 columns">
+                        <div class="small-6 medium-2 columns">
+                            <img src="/img/{{ item.img }}">
+                        </div>
                         <div class="small-6 medium-8 end columns">
                             <h5><a href="{{ item.name | datapage_url: '/catalogue' }}">{{ item.name }}</a></h5>
                             <p>{{ item.description }}</p>
@@ -26,7 +28,9 @@ layout: default
                 <ul>
                 {% for person in site.data.directory %}
                     <li class="row">
-                        <img src="/img/{{ person.photo }}" class="small-6 medium-2 columns">
+                        <div class="small-6 medium-2 columns">                        
+                            <img src="/img/{{ person.photo }}" class="small-6 medium-2 columns">
+                        </div>
                         <div class="small-12 medium-8 end columns">
                             <a href="{{ person.last-name | datapage_url: '/directory' }}">{{ person.first-name }} {{ person.last-name }}</a>
                             <p>{{ person.bio }}</p>

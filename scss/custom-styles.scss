@@ -9,7 +9,11 @@ h3:not(.foundation-default) {
     margin-top: 2rem;
 }
 
-h4.swatch {
+img {
+  height: auto;
+}
+
+/*h4.swatch {
   padding: 1rem;
   &.primary {
     background-color: $primary-color;
@@ -34,21 +38,21 @@ h4.swatch {
     border: 1px solid $medium-gray;
   }
 
-}
+}*/
 
 img.small {
     height: 3rem;
     float: left;
 }
 
-.tearsheet h3:not(.foundation-default) {
+/*.tearsheet h3:not(.foundation-default) {
   border-bottom: solid 1px $medium-gray;
   margin-bottom: 1rem;
 }
 
 .callout.primary {
   color: $white;
-}
+}*/
 
 /*// topbar styles
 // -------------
