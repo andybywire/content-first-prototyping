@@ -3,21 +3,11 @@
   {% include head.html %}
 <body class="no-js">
 
-<div class="off-canvas-wrapper">
-    <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+  {% include global-nav.html %}
 
-        {% include global-nav.html %}
-
-        <div class="off-canvas-content" data-off-canvas-content>
-            <div class="column row">
-
-                {{ content }}          
-
-            </div>
-        </div>
-    </div>
-</div>
-
+  <div class="row column">
+    {{ content }}          
+  </div>
 
 <!-- Footer -->
 <footer id="footer" class="footer">
