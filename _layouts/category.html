@@ -13,8 +13,12 @@ layout: default
                 <ul>
                 {% for item in site.data.catalogue %}
                     <li class="row">  
-                        <div class="small-6 medium-2 columns">
-                            <img src="/img/{{ item.img }}">
+                        <div class="svg small-6 medium-2 columns">
+                            <!-- <img src="/img/{{ item.img }}"> -->
+                          <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+                            <polygon points="0,0 100,100 0,100 100,0 100,100 0,100 0,0 100,0"/>
+                          Sorry, your browser does not support inline SVG.
+                          </svg>
                         </div>
                         <div class="small-6 medium-8 end columns">
                             <h5><a href="{{ item.name | datapage_url: '/catalogue' }}">{{ item.name }}</a></h5>
@@ -29,7 +33,7 @@ layout: default
                 {% for person in site.data.directory %}
                     <li class="row">
                         <div class="small-6 medium-2 columns">                        
-                            <img src="/img/{{ person.photo }}" class="small-6 medium-2 columns">
+                            <img src="/img/{{ person.photo }}">
                         </div>
                         <div class="small-12 medium-8 end columns">
                             <a href="{{ person.last-name | datapage_url: '/directory' }}">{{ person.first-name }} {{ person.last-name }}</a>

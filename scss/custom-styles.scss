@@ -9,8 +9,20 @@ h3:not(.foundation-default) {
     margin-top: 2rem;
 }
 
-img {
+/*img {
   height: auto;
+}*/
+
+.svg {
+  position: relative;
+  background-color: lightgray;
+  padding: 0;
+}
+
+svg {
+  fill: none;
+  stroke: gray;
+  stroke-width: 1;
 }
 
 /*h4.swatch {
@@ -105,12 +117,12 @@ li.events {
 }
 
 .footer {
-  background-color: $primary-color;
+  background-color: $light-gray;
   margin-top: 3rem;
   padding: 2rem 0rem;
-  color: $white;
+  // color: $white;
   a {
-    color: $white;
+    //color: $white;
   }
 }
 
@@ -118,7 +130,7 @@ li.events {
 @include breakpoint(large) {
     .footer {
       .columns:nth-child(n+2) {
-        border-left: 1px solid scale-color($primary-color, $lightness: -30%);
+        border-left: 1px solid scale-color($secondary-color, $lightness: -30%);
         min-height: 240px;
       }
    } 

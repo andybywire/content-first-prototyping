@@ -9,8 +9,11 @@ layout: default
                 <h2>{{ page.name | replace: '-', ' ' | remove: '.html' | capitalize }}</h2>
                 <div class="small-12 large-8 columns end">
                     <div class="row">
-                        <div class="small-12 medium-3 columns">
-                            <img src="/img/{{ page.img }}">
+                        <div class="svg small-12 medium-3 columns">
+                          <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+                            <polygon points="0,0 100,100 0,100 100,0 100,100 0,100 0,0 100,0"/>
+                          Sorry, your browser does not support inline SVG.
+                          </svg>
                         </div>
                         <div class='small-12 medium-9 columns'>
                             <p>{{ page.description }}</p>
