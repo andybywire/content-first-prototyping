@@ -1,3 +1,19 @@
+// prevent FOUC on foundation responsive menu
+//-------------------------------------------
+.no-js {
+  @include breakpoint(small only) {
+    .top-bar {
+      display: none;
+    }
+  }
+
+  @include breakpoint(medium) {
+    .title-bar {
+      display: none;
+    }
+  }
+}
+
 // global styles
 // -------------
 
@@ -9,9 +25,10 @@ h3:not(.foundation-default) {
     margin-top: 2rem;
 }
 
-/*img {
-  height: auto;
-}*/
+img.small {
+    height: 3rem;
+    float: left;
+}
 
 .svg {
   position: relative;
@@ -24,70 +41,6 @@ svg {
   stroke: gray;
   stroke-width: 1;
 }
-
-/*h4.swatch {
-  padding: 1rem;
-  &.primary {
-    background-color: $primary-color;
-    color: $white;
-    border: 1px solid $medium-gray;
-  }
-  &.secondary {
-    background-color: $secondary-color;
-    border: 1px solid $medium-gray;
-  }
-  &.accent {
-    background-color: $medium-gray;
-    border: 1px solid $medium-gray;
-  }
-  &.black {
-    background-color: $body-font-color;
-    border: 1px solid $medium-gray;
-    color: $white;
-  }
-  &.white {
-    background-color: $white;
-    border: 1px solid $medium-gray;
-  }
-
-}*/
-
-img.small {
-    height: 3rem;
-    float: left;
-}
-
-/*.tearsheet h3:not(.foundation-default) {
-  border-bottom: solid 1px $medium-gray;
-  margin-bottom: 1rem;
-}
-
-.callout.primary {
-  color: $white;
-}*/
-
-/*// topbar styles
-// -------------
-
-.title-bar a, .top-bar, .top-bar ul, .top-bar a {
-    background-color: $primary-color;
-    color: $white;
-    .menu-text {
-        padding-left: 0;
-    }
-}
-
-.dropdown.menu .is-dropdown-submenu-parent.is-down-arrow > a::after {
-    border-color: $white transparent transparent;
-}
-
-ul.menu.secondary {
-    padding-left: 1rem;
-}
-
-.no-link {
-    cursor: default;
-}*/
 
 // category template
 // -----------------
@@ -120,10 +73,6 @@ li.events {
   background-color: $light-gray;
   margin-top: 3rem;
   padding: 2rem 0rem;
-  // color: $white;
-  a {
-    //color: $white;
-  }
 }
 
 
